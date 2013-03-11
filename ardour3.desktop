@@ -1,0 +1,16 @@
+[Desktop Entry]
+Comment=Digital Audio Workstation
+Comment[en_GB]=Digital Audio Workstation
+Exec=ardour3
+GenericName=ardour3
+GenericName[en_GB]=ardour3
+Icon=ardour3
+MimeType=application/x-ardour3;
+Name=Ardour3
+Name[en_GB]=Ardour3
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=AudioVideo;Audio;X-Recorders;X-Multitrack;X-Jack;X-Mandriva-CrossDesktop;
+
+
