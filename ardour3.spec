@@ -46,7 +46,6 @@ BuildRequires:	pkgconfig(samplerate)
 BuildRequires:	pkgconfig(serd-0) >= 0.14.0
 BuildRequires:	pkgconfig(sndfile) >= 1.0.18
 BuildRequires:	pkgconfig(sord-0) >= 0.8.0
-BuildRequires:	pkgconfig(sndfile)
 BuildRequires:	pkgconfig(sqlite3)
 BuildRequires:	pkgconfig(sratom-0) >= 0.4.0
 BuildRequires:	pkgconfig(suil-0) >= 0.6.0
