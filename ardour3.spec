@@ -1,7 +1,14 @@
+# Keep libraries private
+%if %{_use_internal_dependency_generator}
+%define __noautoprovfiles %{_libdir}/ardour3
+%define __noautoreq 'libardour\\.so(.*)|libardourcp\\.so(.*)|libvamphost\\.so(.*)|libtaglib\\.so(.*)|libgtkmm2ext\\.so(.*)|librubberband\\.so(.*)|libpbd\\.so(.*)|libqmdsp\\.so(.*)|libaudiographer\\.so(.*)|libsmf\\.so(.*)|libevoral\\.so(.*)|libtimecode\\.so(.*)|libltc\\.so(.*)|libvampplugin\\.so(.*)|libmidipp\\.so(.*)'
+%endif
+
 %define oname	ardour
+
 Name:		ardour3
 Version:	3.0
-Release:	1
+Release:	2
 Summary:	Professional multi-track audio recording application
 Group:		Sound
 License:	GPLv2+
@@ -97,7 +104,9 @@ install -m 644 %{SOURCE1} %{buildroot}%{_datadir}/applications/
 install -d -m 0755 %{buildroot}%{_iconsdir}
 cp -f %{buildroot}%{_datadir}/%{name}/icons/application-x-ardour_48px.png %{buildroot}%{_iconsdir}/ardour3.png
 
-%files
+%find_lang %{name} gtk2_ardour3 gtkmm2ext3 %{name}.lang
+
+%files -f %{name}.lang
 %doc README
 %{_bindir}/%{name}
 %dir %{_libdir}/%{name}
@@ -138,4 +147,3 @@ cp -f %{buildroot}%{_datadir}/%{name}/icons/application-x-ardour_48px.png %{buil
 %dir %{_sysconfdir}/%{name}/export
 %config(noreplace) %{_sysconfdir}/%{name}/export/CD.format
 %{_iconsdir}/ardour3.png
-%{_datadir}/locale/*/*/*.mo
