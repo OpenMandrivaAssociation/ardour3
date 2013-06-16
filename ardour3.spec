@@ -6,24 +6,19 @@
 
 %define oname	ardour
 
+Summary:	Professional multi-track audio recording application
 Name:		ardour3
 Version:	3.2
 Release:	1
-Summary:	Professional multi-track audio recording application
 Group:		Sound
 License:	GPLv2+
-URL:		http://ardour.org/
-
+Url:		http://ardour.org/
 Source0:	%{oname}-%{version}.tar.bz2
 Source1:	ardour3.desktop
-
 BuildRequires:	boost-devel
 BuildRequires:	doxygen
 BuildRequires:	gettext
 BuildRequires:	graphviz
-BuildRequires:	gtk2-devel >= 2.12.1
-BuildRequires:	gtkmm2.4-devel >= 2.8
-BuildRequires:	jackit-devel
 BuildRequires:	shared-mime-info
 BuildRequires:	xdg-utils
 BuildRequires:	pkgconfig(alsa)
@@ -33,6 +28,9 @@ BuildRequires:	pkgconfig(cwiid)
 BuildRequires:	pkgconfig(fftw3)
 BuildRequires:	pkgconfig(flac) >= 1.2.1
 BuildRequires:	pkgconfig(glib-2.0) >= 2.2
+BuildRequires:	pkgconfig(gtk+-2.0)
+BuildRequires:	pkgconfig(gtkmm-2.4)
+BuildRequires:	pkgconfig(jack)
 BuildRequires:	pkgconfig(libart-2.0)
 BuildRequires:	pkgconfig(libcurl) >= 7.0.0
 BuildRequires:	pkgconfig(libgnomecanvas-2.0) >= 2.30
