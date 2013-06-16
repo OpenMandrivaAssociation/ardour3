@@ -7,8 +7,8 @@
 %define oname	ardour
 
 Name:		ardour3
-Version:	3.0
-Release:	2
+Version:	3.2
+Release:	1
 Summary:	Professional multi-track audio recording application
 Group:		Sound
 License:	GPLv2+
@@ -62,6 +62,10 @@ BuildRequires:	pkgconfig(vamp-sdk)
 Requires:	jackit
 Requires:	gtk-engines2
 
+# For video import
+Requires:	harvid
+Requires:	xjadeo
+
 %description
 Ardour3 is a digital audio workstation. You can use it to record, edit and mix
 multi-track audio. You can produce your own CDs, mix video sound tracks, or
@@ -112,7 +116,7 @@ cp -f %{buildroot}%{_datadir}/%{name}/icons/application-x-ardour_48px.png %{buil
 %dir %{_libdir}/%{name}
 %{_libdir}/%{name}/*.so
 %{_libdir}/%{name}/sanityCheck
-%{_libdir}/%{name}/ardour-3.0
+%{_libdir}/%{name}/ardour-%{version}
 %{_libdir}/%{name}/*.so.*
 %{_libdir}/%{name}/panners/*.so
 %{_libdir}/%{name}/panners/*.so.*
@@ -128,8 +132,6 @@ cp -f %{buildroot}%{_datadir}/%{name}/icons/application-x-ardour_48px.png %{buil
 %{_datadir}/%{name}/icons/*.png
 %dir %{_datadir}/%{name}/pixmaps
 %{_datadir}/%{name}/pixmaps/*.xpm
-%dir %{_datadir}/%{name}/templates
-%{_datadir}/%{name}/templates/*/*
 %{_datadir}/%{name}/export/*
 %{_datadir}/%{name}/mcp/*
 %{_datadir}/%{name}/patchfiles/*
