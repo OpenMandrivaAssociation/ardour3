@@ -9,12 +9,14 @@
 Summary:	Professional multi-track audio recording application
 Name:		ardour3
 Version:	3.2
-Release:	1
+Release:	2
 Group:		Sound
 License:	GPLv2+
 Url:		http://ardour.org/
 Source0:	%{oname}-%{version}.tar.bz2
 Source1:	ardour3.desktop
+# MUST be removed when version 3.3+ is released
+Source2:	ardour3-3.2-ru.po
 BuildRequires:	boost-devel
 BuildRequires:	doxygen
 BuildRequires:	gettext
@@ -81,6 +83,7 @@ See the online user manual at http://en.flossmanuals.net/ardour/index/
 
 %prep
 %setup -q -n %{oname}-%{version}
+cp %{SOURCE2} gtk2_ardour/po/ru.po
 
 %build
 ./waf configure \
