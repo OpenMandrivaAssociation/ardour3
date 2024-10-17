@@ -12,7 +12,7 @@ Version:	3.3
 Release:	2
 License:	GPLv2+
 Group:		Sound
-Url:		http://ardour.org/
+Url:		https://ardour.org/
 Source0:	%{oname}-%{version}.tar.bz2
 Source1:	ardour3.desktop
 BuildRequires:	boost-devel
